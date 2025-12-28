@@ -1,0 +1,10 @@
+<x-layout>
+    @include('partials.categories')
+    @include('partials.deal')
+    @include('partials.brands')
+    @include('partials.banner')
+    @include('partials.products')
+    @include('partials.smartphone-and-tablet')
+    @include('partials.computer-and-laptop')
+    @include('partials.speaker')
+</x-layout>

@@ -1,0 +1,161 @@
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.products__section {
+    width: 65%;
+    order: 1;
+}
+
+.products__banner {
+    order: 0;
+    padding: 60px 40px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 32%;
+}
+
+.products__banner-smartphone {
+    background-image: url(https://demo.theme-sky.com/ecomall/wp-content/uploads/2023/12/banner-13.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.products__banner-computer {
+    background-image: url(https://demo.theme-sky.com/ecomall/wp-content/uploads/2023/12/banner-14.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    position: relative;
+}
+
+.products__banner-computer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+
+.products__banner-speaker {
+    background-image: url(https://demo.theme-sky.com/ecomall/wp-content/uploads/2023/12/banner-15.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    position: relative;
+}
+
+.products__banner-speaker::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.products__banner-widget {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1em;
+    color: #fff;
+    background-color: #dd2831;
+    padding: 5px 15px;
+    border-radius: 0px 5px 5px 5px;
+    z-index: 2;
+}
+
+.product-swiper-2 {
+    overflow: hidden;
+}
+
+.products__banner-title {
+    margin: 12px 0;
+    font-size: 36px;
+    font-weight: 800;
+    z-index: 2;
+}
+
+.products__banner-subtitle {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    z-index: 2;
+}
+
+@media (max-width: 1400px) {
+    .products__banner-title {
+        font-size: 30px;
+    }
+
+    .products__banner-subtitle {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .products__section {
+        width: 100%;
+        order: 1;
+    }
+
+    .products__banner {
+        padding: 50px 20px;
+    }
+
+    .products__banner-subtitle {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 992px) {
+    .products__banner {
+        order: 2;
+        padding: 60px;
+        width: 100%;
+    }
+
+    .products__banner-smartphone {
+        background-image: url(https://demo.theme-sky.com/ecomall/wp-content/uploads/2024/02/banner-13-ipad.jpg);
+        background-position: center right;
+    }
+
+    .products__banner.products__banner-smartphone {
+        align-items: start;
+    }
+
+    .products__banner-widget {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 768px) {
+    .products__banner {
+        padding: 40px 20px 140px;
+    }
+
+    .products__banner-smartphone {
+        background-image: url(https://demo.theme-sky.com/ecomall/wp-content/uploads/2023/12/banner-13.jpg);
+        background-position: 0 20%;
+    }
+
+    .products__banner.products__banner-smartphone {
+        align-items: center;
+    }
+
+    .products__banner-title {
+        font-size: 25px;
+    }
+}

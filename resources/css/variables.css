@@ -1,0 +1,13 @@
+:root {
+    --brand: #0d6efd;
+    --text: #111827;
+    --muted: #6b7280;
+    --bg: #f6f7fb;
+    --card: #ffffff;
+    --border: #e5e7eb;
+    --danger: #dc2626;
+    --success: #16a34a;
+    --warning: #f59e0b;
+    --shadow: 0 10px 25px rgba(17, 24, 39, 0.08);
+    --radius: 16px;
+}
