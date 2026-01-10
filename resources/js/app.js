@@ -18,6 +18,15 @@ document.querySelectorAll(".star-rating").forEach((el) => {
     }
 });
 
+const heroSwiperEl = document.querySelector('.hero-swiper');
+const heroSwiper = new Swiper(heroSwiperEl, {
+    pagination: {
+        el: heroSwiperEl.querySelector('.swiper-custom-pagination'),
+        clickable: true,
+    },
+    slidesPerView: 1,
+    loop: true,
+});
 
 const categorySwiper = new Swiper('.category-swiper', {
     slidesPerView: 8,

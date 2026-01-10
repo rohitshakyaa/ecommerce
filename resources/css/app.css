@@ -1,4 +1,5 @@
 @import "./variables.css";
+@import "./hero.css";
 @import "./product-card.css";
 @import "./topbar.css";
 @import "./category.css";
@@ -65,9 +66,20 @@ a {
 }
 
 .bg-gray {
-    background-color: #F4F4F4;
+    background-color: #f4f4f4;
 }
 
 .feature-bar__icon {
     font-size: 50px;
+}
+
+.product-badge {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1em;
+    color: #fff;
+    background-color: #dd2831;
+    padding: 5px 15px;
+    border-radius: 0px 5px 5px 5px;
+    z-index: 2;
 }

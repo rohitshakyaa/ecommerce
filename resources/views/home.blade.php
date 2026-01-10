@@ -1,4 +1,5 @@
 <x-layout>
+    @include('partials.hero')
     @include('partials.categories')
     @include('partials.deal')
     @include('partials.brands')
