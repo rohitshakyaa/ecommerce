@@ -54,7 +54,8 @@
 
 @endphp
 
-<div class="category-swiper container">
+<div class="category-swiper container section">
+    <h3 class="section-title border-b">Categories</h3>
     <!-- Additional required wrapper -->
     <div class="swiper-wrapper">
         @foreach ($categories as $category)

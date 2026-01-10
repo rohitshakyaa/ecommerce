@@ -1,0 +1,20 @@
+.footer-section input {
+    padding: 8px 12px;
+}
+.footer-section input::-moz-placeholder {
+    color: #ccc;
+    opacity: 1;
+}
+.footer-section input::placeholder {
+    color: #ccc;
+    opacity: 1;
+}
+.footer-section .footer-link {
+    color: white;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+.footer-section .footer-link:hover {
+    text-decoration: underline;
+}
