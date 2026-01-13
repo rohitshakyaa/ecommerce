@@ -25,10 +25,6 @@
 
     <div class="overlay" id="overlay"></div>
 
-    <main class="my-5">
-        {{ $slot }}
-    </main>
-
     {{ $slot }}
 
     @include('partials.footer')

@@ -65,9 +65,10 @@
                     <div class="overlay">
                         <i class="bi bi-link-45deg"></i>
                     </div>
-                    <b>{{ $category['name'] }}</b>
-                </a>
-            @endforeach
+                </div>
+                <b>{{ $category['name'] }}</b>
+            </a>
+        @endforeach
         </div>
     </div>
 </div>

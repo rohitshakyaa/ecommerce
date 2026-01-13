@@ -161,9 +161,10 @@
 
 /* scope */
 .products-tabs .nav-tabs {
-    border-bottom: 1px solid #e5e7eb;
     gap: 0.5rem;
     padding-bottom: 4px;
+    background-color: transparent !important;
+    border-bottom: 0;                
 }
 
 .products-tabs .nav-link {
@@ -172,6 +173,7 @@
     font-size: 24px;
     font-weight: 600;
     color: #111827;
+    background-color: transparent !important;
 }
 
 .products-tabs .nav-link:hover {
@@ -180,6 +182,8 @@
 
 .products-tabs .nav-link.active {
     color: #0068c8;
+    background-color: transparent !important;  /* keep active tab bg transparent */
+
 }
 
 .products-tabs .nav-link:focus {
