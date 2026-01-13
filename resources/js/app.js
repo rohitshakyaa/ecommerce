@@ -1,3 +1,6 @@
+// Import header navigation
+import './header.js';
+
 document.querySelectorAll(".star-rating").forEach((el) => {
     const rating = parseFloat(el.getAttribute("data-rating")) || 0;
 
@@ -87,6 +90,44 @@ const productSwiper = new Swiper('.product-swiper', {
     }
 });
 
+// Blog Swiper with drag/swipe functionality
+const blogSwiperElement = document.querySelector('.blog-swiper');
+if (blogSwiperElement) {
+    const blogSlidesCount = blogSwiperElement.querySelectorAll('.swiper-slide').length;
+
+    const blogSwiper = new Swiper('.blog-swiper', {
+        slidesPerView: 3,
+        slidesPerGroup: 1,
+        spaceBetween: 24,
+        grabCursor: true,
+        loop: true,
+        loopedSlides: blogSlidesCount,
+        centeredSlides: false,
+        watchSlidesProgress: true,
+        pagination: {
+            el: '.blog-swiper-pagination',
+            clickable: true,
+        },
+        breakpoints: {
+            1024: {
+                slidesPerView: 3,
+                slidesPerGroup: 1,
+                spaceBetween: 24,
+            },
+            768: {
+                slidesPerView: 2,
+                slidesPerGroup: 1,
+                spaceBetween: 20,
+            },
+            320: {
+                slidesPerView: 1,
+                slidesPerGroup: 1,
+                spaceBetween: 16,
+            },
+        }
+    });
+}
+
 
 function renderCountdown() {
     const wrap = document.getElementById("countdown");
@@ -154,4 +195,70 @@ productSwipers.forEach(el => {
         },
     });
 
+});
+
+/**
+ * Categories Sidebar & Overlay Handler
+ * Note: Mega menu functionality is handled in header.js
+ */
+document.addEventListener('DOMContentLoaded', function() {
+    const categoriesSidebar = document.getElementById('categoriesSidebar');
+    const closeSidebar = document.getElementById('closeSidebar');
+    const overlay = document.getElementById('overlay');
+
+    // Close sidebar button
+    if (closeSidebar && categoriesSidebar && overlay) {
+        closeSidebar.addEventListener('click', function() {
+            categoriesSidebar.classList.remove('show');
+            overlay.classList.remove('show');
+        });
+    }
+
+    // Overlay click handler - close sidebar
+    if (overlay && categoriesSidebar) {
+        overlay.addEventListener('click', function() {
+            categoriesSidebar.classList.remove('show');
+            overlay.classList.remove('show');
+        });
+    }
+
+
+
+    // Initialize Swiper for Categories
+    if (document.querySelector('.category-swiper')) {
+        new Swiper('.category-swiper', {
+            slidesPerView: 2,
+            spaceBetween: 20,
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 3,
+                    spaceBetween: 20,
+                },
+                768: {
+                    slidesPerView: 4,
+                    spaceBetween: 30,
+                },
+                1024: {
+                    slidesPerView: 5,
+                    spaceBetween: 30,
+                },
+            },
+        });
+    }
+
+    // Prevent form submission for demo
+    const searchForm = document.querySelector('.search-form');
+    if (searchForm) {
+        searchForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const searchValue = this.querySelector('[name="search"]').value;
+            console.log('Search submitted:', searchValue);
+            // Add your search logic here
+        });
+    }
 });

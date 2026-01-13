@@ -1,5 +1,7 @@
 .product-card {
     display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
 .product-card__horizontal {
@@ -15,12 +17,18 @@
     transition: border 0.3s ease-in-out;
     border-radius: 8px;
     border: 1px solid white;
+    min-height: 250px;
+    background: #f8f9fa;
 }
 
 .product-card__img-container img {
     max-width: 96%;
     max-height: 96%;
 }
+
+.product-card:hover .product-card__img-container {
+            border: 1px solid #0068c8;
+        }
 
 .product-swiper {
     overflow: hidden;
