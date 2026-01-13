@@ -1,0 +1,211 @@
+.hero-swiper {
+    position: relative;
+}
+
+.hero-swiper__slide {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0; /* keep clean like screenshot */
+    display: flex;
+    align-items: center;
+}
+
+/* Mobile height exactly 620px */
+.hero-swiper__slide {
+    min-height: 620px;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+    .hero-swiper__slide {
+        min-height: 560px;
+    }
+}
+
+/* Laptop/Desktop */
+@media (min-width: 1200px) {
+    .hero-swiper__slide {
+        min-height: 520px;
+    }
+}
+
+/* Image layer */
+.hero-swiper__media {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.hero-swiper__media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    /* KEY: keep the laptop visible (anchored right) */
+    object-position: right center;
+    transform: scale(1.02); /* small scale to remove tiny edges */
+}
+
+/* Optional: soft fade so text is readable */
+.hero-swiper__slide::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0.92) 0%,
+        rgba(255, 255, 255, 0.82) 40%,
+        rgba(255, 255, 255, 0.2) 70%,
+        rgba(255, 255, 255, 0) 100%
+    );
+}
+
+/* Content layer */
+.hero-swiper__content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+/* Desktop: left column width like screenshot */
+.hero-swiper__detail {
+    max-width: 520px;
+}
+
+/* Your existing title styles */
+.hero-swiper__title {
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.02;
+    font-size: clamp(2.1rem, 4vw, 3.6rem);
+}
+
+.hero-swiper__subtitle {
+    font-size: 0.9rem;
+    letter-spacing: 0.14em;
+}
+
+.hero-swiper__price {
+    color: #2f57ff;
+    font-weight: 800;
+    font-size: 2rem;
+    display: inline-block;
+    transform-origin: 50% 70%;
+}
+
+/* Button like screenshot */
+.hero-swiper__btn {
+    padding: 0.9rem 1.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    border-radius: 0.45rem;
+}
+
+/* Pagination */
+.swiper-custom-pagination {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 18px;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* If you use Swiper bullets */
+.swiper-custom-pagination .swiper-pagination-bullet {
+    opacity: 1;
+    width: 8px;
+    height: 8px;
+    border-radius: 999px;
+}
+
+.swiper-custom-pagination .swiper-pagination-bullet-active {
+    width: 34px;
+    border-radius: 999px;
+}
+
+/* Mobile layout: center text like your screenshot */
+@media (max-width: 767.98px) {
+    .hero-swiper__content {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .hero-swiper__detail {
+        max-width: 92%;
+    }
+
+    .hero-swiper__priceRow {
+        justify-content: center;
+    }
+
+    /* Keep laptop visible on mobile:
+       slightly shift focus so the laptop stays in frame */
+    .hero-swiper__media img {
+        object-position: 75% center;
+    }
+
+    /* More “center card” feel like screenshot */
+    .hero-swiper__slide::before {
+        background: radial-gradient(
+            circle at 40% 35%,
+            rgba(255, 255, 255, 0.95) 0%,
+            rgba(255, 255, 255, 0.85) 55%,
+            rgba(255, 255, 255, 0.1) 85%,
+            rgba(255, 255, 255, 0) 100%
+        );
+    }
+}
+
+/* Wobble animation (keep yours) */
+@keyframes wobblePrice {
+    0% {
+        transform: translateY(0) rotate(0deg) scale(1);
+    }
+    10% {
+        transform: translateY(-2px) rotate(-2deg) scale(1.02);
+    }
+    20% {
+        transform: translateY(0) rotate(2deg) scale(1.02);
+    }
+    30% {
+        transform: translateY(-1px) rotate(-1.5deg) scale(1.01);
+    }
+    40% {
+        transform: translateY(0) rotate(1.5deg) scale(1.01);
+    }
+    50% {
+        transform: translateY(-1px) rotate(-1deg) scale(1.01);
+    }
+    60% {
+        transform: translateY(0) rotate(1deg) scale(1.01);
+    }
+    70% {
+        transform: translateY(-1px) rotate(-0.6deg) scale(1.005);
+    }
+    80% {
+        transform: translateY(0) rotate(0.6deg) scale(1.005);
+    }
+    90% {
+        transform: translateY(-0.5px) rotate(-0.3deg) scale(1.002);
+    }
+    100% {
+        transform: translateY(0) rotate(0deg) scale(1);
+    }
+}
+
+.wobble {
+    animation: wobblePrice 2s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .wobble {
+        animation: none;
+    }
+}

@@ -63,7 +63,7 @@
     ];
 @endphp
 
-<section class="container">
+<section class="container section">
     <h3 class="section-title">Our Brand</h3>
     <div class="brand__grid">
         @foreach ($brandLogos as $brandLogo)

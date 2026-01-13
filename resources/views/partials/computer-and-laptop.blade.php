@@ -123,7 +123,7 @@
     ];
 @endphp
 
-<section class="container products mb-5">
+<section class="container products mb-5 section">
     <div class="products__banner products__banner-computer">
         <span class="products__banner-widget">NEW PRODUCT</span>
         <h2 class="products__banner-title">30% Off Or More</h2>

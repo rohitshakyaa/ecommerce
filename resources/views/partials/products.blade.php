@@ -330,7 +330,7 @@
     ];
 @endphp
 
-<div class="container">
+<div class="container section products-tabs"> 
     <ul class="nav nav-tabs mb-4" id="productTabs" role="tablist">
         <li class="nav-item" role="presentation">
             <button class="nav-link active" id="new-arrivals-tab" data-bs-toggle="tab" data-bs-target="#new-arrivals"

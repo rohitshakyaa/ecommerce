@@ -45,7 +45,6 @@
     z-index: 1;
 }
 
-
 .products__banner-speaker {
     background-image: url(https://demo.theme-sky.com/ecomall/wp-content/uploads/2023/12/banner-15.jpg);
     background-position: center center;
@@ -158,4 +157,31 @@
     .products__banner-title {
         font-size: 25px;
     }
+}
+
+/* scope */
+.products-tabs .nav-tabs {
+    border-bottom: 1px solid #e5e7eb;
+    gap: 0.5rem;
+    padding-bottom: 4px;
+}
+
+.products-tabs .nav-link {
+    padding: 0.6rem 1rem;
+    border: 0;
+    font-size: 24px;
+    font-weight: 600;
+    color: #111827;
+}
+
+.products-tabs .nav-link:hover {
+    color: #0068c8;
+}
+
+.products-tabs .nav-link.active {
+    color: #0068c8;
+}
+
+.products-tabs .nav-link:focus {
+    box-shadow: none;
 }
