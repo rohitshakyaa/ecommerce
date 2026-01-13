@@ -54,19 +54,23 @@
 
 @endphp
 
-<div class="category-swiper container">
-    <!-- Additional required wrapper -->
-    <div class="swiper-wrapper">
-        @foreach ($categories as $category)
-            <a class="swiper-slide d-flex flex-column align-items-center">
-                <div class="img-container d-flex justify-content-center align-items-center">
-                    <img src="{{ $category['image'] }}" alt="{{ $category['name'] }}" />
-                    <div class="overlay">
-                        <i class="bi bi-link-45deg"></i>
+<div class="container my-5">
+    <!-- Categories -->
+    <h3 class="section-title">Categories</h3>
+    <div class="category-swiper container">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            @foreach ($categories as $category)
+                <a class="swiper-slide d-flex flex-column align-items-center">
+                    <div class="img-container d-flex justify-content-center align-items-center">
+                        <img src="{{ $category['image'] }}" alt="{{ $category['name'] }}" />
+                        <div class="overlay">
+                            <i class="bi bi-link-45deg"></i>
+                        </div>
                     </div>
-                </div>
-                <b>{{ $category['name'] }}</b>
-            </a>
-        @endforeach
+                    <b>{{ $category['name'] }}</b>
+                </a>
+            @endforeach
+        </div>
     </div>
 </div>

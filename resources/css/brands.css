@@ -2,6 +2,7 @@
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: 0;
+    margin-bottom: 50px;
 }
 
 .brand__item {
@@ -11,11 +12,13 @@
     align-items: center;
     justify-content: center;
     position: relative;
+    text-decoration: none;
 }
 
 .brand__item img {
     opacity: 0.2;
     transition: opacity 0.3s ease-in-out;
+    max-width: 80%;
 }
 
 .brand__item:hover img {

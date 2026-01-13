@@ -7,4 +7,5 @@
     @include('partials.smartphone-and-tablet')
     @include('partials.computer-and-laptop')
     @include('partials.speaker')
+    @include('partials.blog')
 </x-layout>
