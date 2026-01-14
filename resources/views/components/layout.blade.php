@@ -21,6 +21,7 @@
 
 <body>
     @include('partials.topbar')
+    @include('partials.header')
 
     {{ $slot }}
 

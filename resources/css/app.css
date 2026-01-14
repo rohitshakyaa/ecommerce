@@ -8,6 +8,11 @@
 @import "./deal.css";
 @import "./banner.css";
 @import "./footer.css";
+@import "./blog.css";
+@import "./header.css";
+@import "./search.css";
+@import "./category-sidebar.css";
+@import "./login-dropdown.css";
 
 * {
     margin: 0;

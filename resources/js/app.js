@@ -1,3 +1,5 @@
+import './header.js';
+
 document.querySelectorAll(".star-rating").forEach((el) => {
     const rating = parseFloat(el.getAttribute("data-rating")) || 0;
 
@@ -155,3 +157,42 @@ productSwipers.forEach(el => {
     });
 
 });
+
+
+// Blog Swiper with drag/swipe functionality
+const blogSwiperElement = document.querySelector('.blog-swiper');
+if (blogSwiperElement) {
+    const blogSlidesCount = blogSwiperElement.querySelectorAll('.swiper-slide').length;
+
+    const blogSwiper = new Swiper('.blog-swiper', {
+        slidesPerView: 3,
+        slidesPerGroup: 1,
+        spaceBetween: 24,
+        grabCursor: true,
+        loop: true,
+        loopedSlides: blogSlidesCount,
+        centeredSlides: false,
+        watchSlidesProgress: true,
+        pagination: {
+            el: '.blog-swiper-pagination',
+            clickable: true,
+        },
+        breakpoints: {
+            1024: {
+                slidesPerView: 3,
+                slidesPerGroup: 1,
+                spaceBetween: 24,
+            },
+            768: {
+                slidesPerView: 2,
+                slidesPerGroup: 1,
+                spaceBetween: 20,
+            },
+            320: {
+                slidesPerView: 1,
+                slidesPerGroup: 1,
+                spaceBetween: 16,
+            },
+        }
+    });
+}
