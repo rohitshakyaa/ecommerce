@@ -106,28 +106,12 @@
 }
 
 /* Pagination */
-.swiper-custom-pagination {
+.swiper-hero-pagination {
     position: absolute;
     left: 0;
     right: 0;
     bottom: 18px;
     z-index: 5;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-}
-
-/* If you use Swiper bullets */
-.swiper-custom-pagination .swiper-pagination-bullet {
-    opacity: 1;
-    width: 8px;
-    height: 8px;
-    border-radius: 999px;
-}
-
-.swiper-custom-pagination .swiper-pagination-bullet-active {
-    width: 34px;
-    border-radius: 999px;
 }
 
 /* Mobile layout: center text like your screenshot */

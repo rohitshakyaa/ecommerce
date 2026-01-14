@@ -23,7 +23,7 @@ document.querySelectorAll(".star-rating").forEach((el) => {
 const heroSwiperEl = document.querySelector('.hero-swiper');
 const heroSwiper = new Swiper(heroSwiperEl, {
     pagination: {
-        el: heroSwiperEl.querySelector('.swiper-custom-pagination'),
+        el: heroSwiperEl.querySelector('.swiper-hero-pagination'),
         clickable: true,
     },
     slidesPerView: 1,
@@ -126,6 +126,7 @@ setInterval(renderCountdown, 1000);
 
 const productSwipers = document.querySelectorAll(".product-swiper-2");
 productSwipers.forEach(el => {
+    console.log(el.querySelector('.swiper-custom-pagination'));
 
     const productTwoSwiper = new Swiper(el, {
         slidesPerView: 2,
@@ -142,6 +143,7 @@ productSwipers.forEach(el => {
 
         // ✅ makes pagination + next/prev move “one page”
         // slidesPerGroup: 2,
+
 
         pagination: {
             el: el.querySelector(".swiper-custom-pagination"),

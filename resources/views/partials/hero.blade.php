@@ -54,5 +54,5 @@
     </div>
 
     {{-- IMPORTANT: pagination should be outside swiper-wrapper --}}
-    <div class="swiper-custom-pagination"></div>
+    <div class="swiper-hero-pagination swiper-custom-pagination"></div>
 </div>
