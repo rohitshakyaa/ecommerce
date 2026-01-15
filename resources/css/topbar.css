@@ -1,107 +1,160 @@
-/**
- * Topbar Styles
- * Top navigation bar with language/currency dropdowns
- */
+/* =========================
+   TOPBAR (Ecomall style)
+========================= */
 
-/* Main Topbar Container */
 .topbar {
     background-color: #0f0f0f;
-    color: #999696;
-    font-size: 14px;
+    color: #b5b5b5;
+    font-size: 13px;
     height: 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 80px;
+    width: 100%;
     position: relative;
     z-index: 999;
+    overflow: visible;
 }
 
-/* Topbar Sections */
+/* Inner container — MUST match header width */
+.topbar-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: visible;
+}
+
+/* LEFT / CENTER / RIGHT */
 .topbar-left,
 .topbar-right {
     display: flex;
-    gap: 20px;
     align-items: center;
 }
 
-.topbar-center {
-    opacity: 0.85;
+.topbar-left {
+    gap: 18px;
 }
 
-/* Topbar Items */
+.topbar-right {
+    gap: 22px;
+}
+
+/* Center text */
+.topbar-center {
+    color: #8f8f8f;
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+/* Items */
 .topbar-item {
+    color: #ffffff;
     cursor: pointer;
-    transition: color 0.3s ease;
-    background: none;
-    border: none;
-    margin-left: 16px;
-    color: #fff;
+    font-size: 13px;
+    transition: color 0.25s ease;
+    text-decoration: none;
 }
 
 .topbar-item:hover {
     color: #1e90ff;
 }
 
-/* Dropdown System */
+.topbar,
+.topbar-item,
+.topbar-center{
+    color: #b5b5b5; /* muted gray */
+}
+
+/* =========================
+   DROPDOWN
+========================= */
+
 .dropdown {
     position: relative;
 }
 
+.dropdown > .topbar-item::after {
+    content: "▾";
+    font-size: 10px;
+    margin-left: 6px;
+    color: #777;
+}
+
 .dropdown-menu {
     position: absolute;
-    top: 100%;
+    top: calc(100% + 8px);
     left: 0;
-    margin-top: 0;
-    background-color: #fff;
-    max-width: 100px;
-    display: none;
+    background-color: #ffffff;
+    min-width: 120px;
+    display: flex;
     flex-direction: column;
-    z-index: 1000;
-    border-radius: 0 0 5px 5px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    border-radius: 0 0 6px 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     opacity: 0;
     pointer-events: none;
-    transition: opacity 0.3s ease;
+    transform: translateY(6px);
+    transition: opacity 0.25s ease, transform 0.25s ease;
+    z-index: 1000;
 }
 
-.dropdown:hover .dropdown-menu,
-.dropdown-menu:hover {
-    display: flex;
+.dropdown:hover .dropdown-menu {
     opacity: 1;
     pointer-events: auto;
-}
-
-.dropdown-menu li {
-    list-style: none;
+    transform: translateY(0);
 }
 
 .dropdown-menu a {
-    display: block;
     padding: 10px 14px;
-    color: #000;
+    font-size: 13px;
+    color: #de1a1a;
     text-decoration: none;
-    transition: color 0.3s ease, background 0.3s ease;
+    transition: background 0.2s ease, color 0.2s ease;
 }
 
 .dropdown-menu a:hover {
+    background: #f5f7fa;
     color: #1e90ff;
-    background: #f8f9fa;
 }
 
-/* Responsive */
+/* =========================
+   RESPONSIVE
+========================= */
+
+/* Topbar Responsive */
+@media (max-width: 1024px) {
+    .topbar-center {
+        display: none;
+    }
+}
+
 @media (max-width: 768px) {
     .topbar {
-        padding: 0 20px;
         font-size: 12px;
+        height: 35px;
     }
 
-    .topbar-left,
+    .topbar-inner {
+        padding: 0 15px;
+    }
+
+    .topbar-left {
+        gap: 12px;
+    }
+
     .topbar-right {
-        gap: 10px;
+        gap: 14px;
+        font-size: 11px;
     }
+    
+    .topbar-item {
+        font-size: 11px;
+    }
+}
 
-    .topbar-center {
+@media (max-width: 576px) {
+    .topbar-right a:not(:first-child):not(:nth-child(2)) {
         display: none;
     }
 }

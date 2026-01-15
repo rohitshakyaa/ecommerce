@@ -30,10 +30,12 @@
 
 .container {
     max-width: 1410px !important;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .section {
-    padding: 60px 0;
+    margin-bottom: 92px;
 }
 
 a {
@@ -45,6 +47,7 @@ a {
     line-height: 1;
     margin-bottom: 23px;
     font-weight: bold;
+    font-family: 'Honor; src:url(https://efix.com.np/assets/fonts/HONORSansBrand-Regular.ttf)';
 }
 
 .section-title.border-b {
@@ -87,4 +90,37 @@ a {
     padding: 5px 15px;
     border-radius: 0px 5px 5px 5px;
     z-index: 2;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+
+    .section {
+        margin-bottom: 70px;
+    }
+}
+
+@media (max-width: 992px) {
+    .section {
+        margin-bottom: 50px;
+    }
+    
+    .section-title {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .section {
+        margin-bottom: 40px;
+    }
+    
+    .section-title {
+        font-size: 18px;
+        margin-bottom: 18px;
+    }
+    
+    .feature-bar__icon {
+        font-size: 40px;
+    }
 }

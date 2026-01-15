@@ -93,9 +93,14 @@
 
 <div class="main-header">
     <div class="header-content">
-        <a href="#" class="logo">
-            <span>e</span>comall
-        </a>
+        <div class="logo-wrapper">
+            <a href="#" class="logo">
+                <img src="https://demo.theme-sky.com/ecomall/wp-content/uploads/2023/12/logo-white.png" alt="Logo"
+                    class="logo-white" />
+                <img src="https://demo.theme-sky.com/ecomall/wp-content/uploads/2023/12/logo.png" alt="Logo"
+                    class="logo-dark" />
+            </a>
+        </div>
 
         <nav class="main-nav">
             <div class="nav-item-wrapper">
@@ -285,7 +290,7 @@
                     <span class="price">$0.00</span>
                 </div>
                 <div class="cart-hover-dropdown">
-                    <div class="cart-empty-message">
+                    <div class="cart-empty-message d-flex justify-between align-items-center">
                         <i class="bi bi-cart-x"></i>
                         <p>Your cart is empty</p>
                     </div>

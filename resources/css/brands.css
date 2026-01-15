@@ -2,6 +2,10 @@
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: 0;
+    border-radius: 8px;
+}
+.brands-section {
+    margin-bottom: 92px;
 }
 
 .brand__item {

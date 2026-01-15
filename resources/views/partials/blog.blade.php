@@ -58,7 +58,7 @@
     ];
 @endphp
 
-<section class="container blog-section">
+<section class="container section">
     <h3 class="section-title">From Our Blog</h3>
     <hr class="blog-section__divider">
 

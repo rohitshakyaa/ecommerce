@@ -13,6 +13,8 @@
         'hot' => true,
         'discount_percent' => 15,
         'rating' => 4.5,
+        'sold' => 10,
+        'total' => 100,
     ];
 
     $product2 = [
@@ -29,16 +31,19 @@
         'hot' => true,
         'discount_percent' => 15,
         'rating' => 4.5,
+        'sold' => 53,
+        'total' => 100,
     ];
 @endphp
 
 <section class="deal section bg-gray">
-    <div class="container">
+    <div class="container deal-section">
 
         <h3 class="section-title deal__title">Deal Of The Week</h3>
+        <hr>
         <div class="deal__body">
             <div class="deal__product deal__product-1">
-                <x-product-card :product="$product1" :badge-on-top="false" />
+                <x-product-card :product="$product1" :badge-on-top="false" :border-on-hover="true" />
             </div>
             <div class="deal__best-deal">
                 <p class="subtitle">Best Deals this week</p>
@@ -47,7 +52,7 @@
                 <div class="countdown" id="countdown" data-ends-at="2026-01-01 12:00:00"></div>
             </div>
             <div class="deal__product deal__product-2">
-                <x-product-card :product="$product1" :badge-on-top="false" />
+                <x-product-card :product="$product1" :badge-on-top="false" :border-on-hover="true" />
             </div>
         </div>
     </div>

@@ -37,7 +37,7 @@
             </button>
         </nav>
     </a>
-    <section class="product-card__body" aria-label="Product details">
+    <section class="product-card__body @if (!$horizontal) product-card__body-vertical @endif" aria-label="Product details">
         @if (!$badgeOnTop)
             <div class="product-card__badges-bottom">
                 @if ($product['discount_percent'])
@@ -73,5 +73,17 @@
                 <span class="product-card__price-current">${{ $product['initial_price'] }}</span>
             @endif
         </div>
+        @if ($product['sold'] && $product['total'])
+            <div class="product-card__stock-container">
+                <div class="product-card__stock">
+                    <span class="text-muted">
+                        Sold:</span>{{ $product['sold'] . '/' . $product['total'] }}
+                </div>
+                <div class="product-card__stock-progress">
+                    <progress class="product-card__stock-progress-bar" value="{{ $product['sold'] }}"
+                        max="{{ $product['total'] }}"></progress>
+                </div>
+            </div>
+        @endif
     </section>
 </div>

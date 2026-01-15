@@ -54,7 +54,7 @@
 
 @endphp
 
-<div class="category-swiper container section">
+<div class="category-swiper container category-section">
     <h3 class="section-title border-b">Categories</h3>
     <!-- Additional required wrapper -->
     <div class="swiper-wrapper">

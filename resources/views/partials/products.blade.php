@@ -15,6 +15,8 @@
             'hot' => true,
             'discount_percent' => 15,
             'rating' => 4.5,
+            'sold' => null,
+            'total' => null,
         ],
         [
             'id' => 6963,
@@ -30,6 +32,8 @@
             'hot' => false,
             'discount_percent' => 0,
             'rating' => 4.7,
+            'sold' => null,
+            'total' => null,
         ],
         [
             'id' => 6898,
@@ -46,6 +50,8 @@
             'hot' => false,
             'discount_percent' => 5,
             'rating' => 4.0,
+            'sold' => null,
+            'total' => null,
         ],
         [
             'id' => 6978,
@@ -61,6 +67,8 @@
             'hot' => true,
             'discount_percent' => 15,
             'rating' => 4.5,
+            'sold' => null,
+            'total' => null,
         ],
         [
             'id' => 6963,
@@ -76,6 +84,8 @@
             'hot' => false,
             'discount_percent' => 0,
             'rating' => 4.7,
+            'sold' => null,
+            'total' => null,
         ],
         [
             'id' => 6898,
@@ -92,6 +102,8 @@
             'hot' => false,
             'discount_percent' => 5,
             'rating' => 4.0,
+            'sold' => null,
+            'total' => null,
         ],
         [
             'id' => 6978,
@@ -107,6 +119,8 @@
             'hot' => true,
             'discount_percent' => 15,
             'rating' => 4.5,
+            'sold' => null,
+            'total' => null,
         ],
         [
             'id' => 6963,
@@ -122,6 +136,8 @@
             'hot' => false,
             'discount_percent' => 0,
             'rating' => 4.7,
+            'sold' => null,
+            'total' => null,
         ],
         [
             'id' => 6898,
@@ -138,6 +154,8 @@
             'hot' => false,
             'discount_percent' => 5,
             'rating' => 4.0,
+            'sold' => null,
+            'total' => null,
         ],
         [
             'id' => 6978,
@@ -153,6 +171,8 @@
             'hot' => true,
             'discount_percent' => 15,
             'rating' => 4.5,
+            'sold' => null,
+            'total' => null,
         ],
         [
             'id' => 6963,
@@ -168,6 +188,8 @@
             'hot' => false,
             'discount_percent' => 0,
             'rating' => 4.7,
+            'sold' => null,
+            'total' => null,
         ],
         [
             'id' => 6898,
@@ -184,6 +206,8 @@
             'hot' => false,
             'discount_percent' => 5,
             'rating' => 4.0,
+            'sold' => null,
+            'total' => null,
         ],
     ];
 
@@ -202,6 +226,8 @@
             'hot' => true,
             'discount_percent' => 0,
             'rating' => 4.0,
+            'sold' => null,
+            'total' => null,
         ],
         [
             'id' => 6881,
@@ -218,6 +244,8 @@
             'hot' => true,
             'discount_percent' => 3,
             'rating' => 5.0,
+            'sold' => null,
+            'total' => null,
         ],
         [
             'id' => 6772,
@@ -233,6 +261,8 @@
             'hot' => false,
             'discount_percent' => 26,
             'rating' => 4.5,
+            'sold' => null,
+            'total' => null,
         ],
     ];
 
@@ -251,6 +281,8 @@
             'hot' => false,
             'discount_percent' => 28,
             'rating' => 5.0,
+            'sold' => null,
+            'total' => null,
         ],
         [
             'id' => 6963,
@@ -266,6 +298,8 @@
             'hot' => false,
             'discount_percent' => 0,
             'rating' => 4.7,
+            'sold' => null,
+            'total' => null,
         ],
         [
             'id' => 6772,
@@ -281,6 +315,8 @@
             'hot' => false,
             'discount_percent' => 26,
             'rating' => 4.5,
+            'sold' => null,
+            'total' => null,
         ],
         [
             'id' => 6927,
@@ -296,6 +332,8 @@
             'hot' => false,
             'discount_percent' => 28,
             'rating' => 5.0,
+            'sold' => null,
+            'total' => null,
         ],
         [
             'id' => 6963,
@@ -311,6 +349,8 @@
             'hot' => false,
             'discount_percent' => 0,
             'rating' => 4.7,
+            'sold' => null,
+            'total' => null,
         ],
         [
             'id' => 6772,
@@ -326,11 +366,13 @@
             'hot' => false,
             'discount_percent' => 26,
             'rating' => 4.5,
+            'sold' => null,
+            'total' => null,
         ],
     ];
 @endphp
 
-<div class="container section products-tabs"> 
+<div class="container section products-tabs">
     <ul class="nav nav-tabs mb-4" id="productTabs" role="tablist">
         <li class="nav-item" role="presentation">
             <button class="nav-link active" id="new-arrivals-tab" data-bs-toggle="tab" data-bs-target="#new-arrivals"
@@ -361,7 +403,7 @@
                 <div class="swiper-wrapper">
                     @foreach ($newArrivals as $product)
                         <div class="swiper-slide">
-                            <x-product-card :product="$product" />
+                            <x-product-card :product="$product" :borderOnHover="true" />
                         </div>
                     @endforeach
                 </div>

@@ -14,6 +14,8 @@
             'hot' => false,
             'discount_percent' => 28,
             'rating' => 5.0,
+            'sold' => null,
+            'total' => null,
         ],
         [
             'id' => 6963,
@@ -29,6 +31,8 @@
             'hot' => false,
             'discount_percent' => 0,
             'rating' => 4.7,
+            'sold' => null,
+            'total' => null,
         ],
         [
             'id' => 6772,
@@ -44,6 +48,8 @@
             'hot' => false,
             'discount_percent' => 26,
             'rating' => 4.5,
+            'sold' => null,
+            'total' => null,
         ],
         [
             'id' => 6927,
@@ -59,6 +65,8 @@
             'hot' => false,
             'discount_percent' => 28,
             'rating' => 5.0,
+            'sold' => null,
+            'total' => null,
         ],
         [
             'id' => 6963,
@@ -74,6 +82,8 @@
             'hot' => false,
             'discount_percent' => 0,
             'rating' => 4.7,
+            'sold' => null,
+            'total' => null,
         ],
         [
             'id' => 6772,
@@ -89,6 +99,8 @@
             'hot' => false,
             'discount_percent' => 26,
             'rating' => 4.5,
+            'sold' => null,
+            'total' => null,
         ],
         [
             'id' => 6963,
@@ -104,6 +116,8 @@
             'hot' => false,
             'discount_percent' => 0,
             'rating' => 4.7,
+            'sold' => null,
+            'total' => null,
         ],
         [
             'id' => 6772,
@@ -119,6 +133,8 @@
             'hot' => false,
             'discount_percent' => 26,
             'rating' => 4.5,
+            'sold' => null,
+            'total' => null,
         ],
     ];
 @endphp
