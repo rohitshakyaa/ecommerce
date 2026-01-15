@@ -30,7 +30,7 @@
                     </div>
                 @endforeach
             </div>
-            <div class="swiper-pagination">
+            <div class="blog-gallery-swiper-pagination swiper-pagination">
 
             </div>
         </div>
@@ -90,3 +90,29 @@
     </div>
     @endif
 </article>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.blog-card__gallery').forEach(swiperContainer => {
+
+        const slidesCount =
+            swiperContainer.querySelectorAll('.swiper-slide').length;
+
+        new Swiper(swiperContainer, {
+            slidesPerView: 1,
+            slidesPerGroup: 1,
+            spaceBetween: 0,
+            grabCursor: true,
+
+            loop: slidesCount > 1,
+            loopedSlides: slidesCount,
+
+            pagination: {
+                el: swiperContainer.querySelector('.blog-gallery-swiper-pagination'),
+                clickable: true,
+            },
+        });
+    });
+});
+
+</script>
+
