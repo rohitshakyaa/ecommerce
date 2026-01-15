@@ -1,0 +1,453 @@
+/**
+ * Search Section & Mega Menu Styles
+ * Search bar, category dropdown, and Shop Categories mega menu
+ */
+
+/* Search Section Container */
+.search-section {
+    background: #1a1a1a;
+    border-top: 1px solid #333;
+    position: relative;
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+
+.main-header.scrolled .search-section {
+    max-height: 0;
+    opacity: 0;
+    padding: 0;
+    border: none;
+    overflow: hidden;
+}
+
+.search-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 12px 20px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+/* Categories Button */
+.categories-btn-wrapper {
+    position: relative;
+}
+
+.categories-btn {
+    background: #0d6efd;
+    color: #fff;
+    border: none;
+    padding: 11px 20px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background 0.3s;
+}
+
+.categories-btn:hover {
+    background: #0b5ed7;
+}
+
+.categories-btn i:first-child {
+    font-size: 18px;
+}
+
+.categories-btn i:last-child {
+    font-size: 11px;
+    transition: transform 0.3s;
+}
+
+.categories-btn-wrapper:hover .categories-btn i:last-child {
+    transform: rotate(180deg);
+}
+
+/* Categories Mega Menu */
+.categories-mega-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    z-index: 1002;
+    width: 800px;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    pointer-events: none;
+    margin-top: 2px;
+}
+
+.categories-btn-wrapper:hover .categories-mega-menu {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.categories-mega-content {
+    display: flex;
+    min-height: 400px;
+    position: relative;
+}
+
+/* Left Panel - Main Categories */
+.categories-main-list {
+    width: 280px;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.categories-main-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.categories-main-list .category-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 20px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border-left: 3px solid transparent;
+}
+
+.categories-main-list .category-item:first-child {
+    border-radius: 8px 0 0 0;
+}
+
+.categories-main-list .category-item:last-child {
+    border-radius: 0 0 0 8px;
+}
+
+.categories-main-list .category-item i:first-child {
+    font-size: 18px;
+    color: #666;
+    transition: color 0.2s;
+}
+
+.categories-main-list .category-item span {
+    flex: 1;
+    font-size: 14px;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.categories-main-list .category-item i:last-child {
+    font-size: 12px;
+    color: #999;
+    transition: transform 0.2s;
+}
+
+.categories-main-list .category-item:hover,
+.categories-main-list .category-item.active {
+    background: #fff;
+    text-decoration: bold;
+    border-left-color: #1a7ff3;
+}
+
+.categories-main-list .category-item:hover i:first-child,
+.categories-main-list .category-item.active i:first-child {
+    color: #1a7ff3;
+}
+
+.categories-main-list .category-item:hover span,
+.categories-main-list .category-item.active span {
+    color: #1a7ff3;
+}
+
+.categories-main-list .category-item:hover i:last-child,
+.categories-main-list .category-item.active i:last-child {
+    transform: translateX(3px);
+}
+
+/* Right Panel - Subcategories (Flyout) */
+.categories-sub-panel {
+    position: absolute;
+    left: 280px; /* Position next to main list */
+    top: 0;
+    bottom: 0;
+    width: 600px;
+    padding: 30px;
+    background: #fff;
+    border-radius: 0 8px 8px 0;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+    display: none; /* Hidden by default */
+    z-index: 10;
+}
+
+/* Show panel when it has active subcategories */
+.categories-sub-panel.show {
+    display: block;
+}
+
+.subcategory-content {
+    display: none;
+}
+
+.subcategory-content.active {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.subcategory-group h4 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 15px;
+}
+
+.subcategory-group ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.subcategory-group ul li {
+    margin-bottom: 10px;
+}
+
+.subcategory-group ul li a {
+    color: #666;
+    text-decoration: none;
+    font-size: 13px;
+    transition: all 0.2s;
+    display: inline-block;
+}
+
+.subcategory-group ul li a:hover {
+    color: #ff6b35;
+    padding-left: 5px;
+}
+
+/* Search Form Wrapper */
+.search-form-wrapper {
+    flex: 1;
+    display: flex;
+    background: #fff;
+    border-radius: 4px;
+    overflow: visible;
+}
+
+/* Search Form */
+.search-form {
+    flex: 1;
+    display: flex;
+}
+
+.category-dropdown {
+    position: relative;
+}
+
+.category-dropdown-btn {
+    padding: 11px 16px;
+    border: none;
+    background: #f8f9fa;
+    font-size: 13px;
+    cursor: pointer;
+    min-width: 180px;
+    border-right: 1px solid #dee2e6;
+    color: #333;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    transition: background 0.2s;
+}
+
+.category-dropdown-btn:hover {
+    background: #e9ecef;
+}
+
+.category-dropdown-btn i {
+    font-size: 11px;
+    color: #6c757d;
+    transition: transform 0.3s;
+}
+
+.category-dropdown.show .category-dropdown-btn i {
+    transform: rotate(180deg);
+}
+
+/* Category Dropdown Menu */
+.category-dropdown-menu {
+    display: none !important;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    width: 220px;
+    max-height: 350px;
+    overflow-y: auto;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    z-index: 99;
+    border: 1px solid #dee2e6;
+    margin-top: 4px;
+}
+
+.category-dropdown-menu.show {
+    display: block !important;
+}
+
+.category-dropdown-menu ul {
+    list-style: none;
+    padding: 8px 0;
+    margin: 0;
+}
+
+.category-dropdown-menu li {
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.category-dropdown-menu li:last-child {
+    border-bottom: none;
+}
+
+.category-dropdown-menu li a {
+    display: block;
+    padding: 12px 16px;
+    color: #333;
+    text-decoration: none;
+    font-size: 13px;
+    transition: all 0.2s;
+    font-weight: 500;
+}
+
+.category-dropdown-menu li a:hover {
+    background: #f8f9fa;
+    color: #0d6efd;
+    padding-left: 20px;
+}
+
+/* Search Input */
+.search-input {
+    flex: 1;
+    padding: 11px 16px;
+    border: none;
+    font-size: 13px;
+    outline: none;
+    color: #333;
+}
+
+.search-input::placeholder {
+    color: #999;
+}
+
+.search-form button[type="submit"] {
+    background: #0d6efd;
+    color: #fff;
+    border: none;
+    padding: 11px 28px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.search-form button[type="submit"]:hover {
+    background: #0b5ed7;
+}
+
+/* Contact Info */
+.contact-info {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    font-weight: 700;
+    white-space: nowrap;
+    transition: color 0.3s ease;
+}
+
+.main-header.scrolled .contact-info {
+    color: #1a1a1a;
+}
+
+.contact-info i {
+    font-size: 24px;
+    color: #ffc107;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .categories-mega-menu {
+        min-width: 700px;
+    }
+
+    .categories-mega-content {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+}
+
+@media (max-width: 992px) {
+    .categories-mega-menu {
+        min-width: 500px;
+    }
+
+    .categories-mega-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .search-content {
+        flex-wrap: wrap;
+    }
+
+    .categories-btn-wrapper {
+        width: 100%;
+    }
+
+    .categories-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .categories-mega-menu {
+        left: 0;
+        right: 0;
+        min-width: auto;
+        width: calc(100vw - 40px);
+        max-width: none;
+        border-radius: 8px;
+    }
+
+    .categories-mega-content {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 20px;
+        max-height: 400px;
+    }
+
+    .search-form {
+        width: 100%;
+    }
+
+    .category-dropdown select {
+        min-width: 140px;
+    }
+
+    .contact-info {
+        width: 100%;
+        justify-content: center;
+    }
+}
