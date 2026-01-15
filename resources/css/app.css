@@ -8,6 +8,7 @@
 @import "./deal.css";
 @import "./banner.css";
 @import "./footer.css";
+@import "./blog.css";
 
 * {
     margin: 0;
